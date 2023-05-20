@@ -1,11 +1,12 @@
-Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 
+Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
+
 
 **Convert Digit Names**
 If your Composition name and the names of the layers in it are just numbers, it converts them to text. Or vice versa.
 
-**Propmpt Unused Compositions**
+**Prompt Unused Compositions**
 It displays the names of the compositions not used in your project.
 
 **Quick Rename Selected Layer or Active Comp**
