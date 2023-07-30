@@ -19,3 +19,8 @@ This script renames the layers by alphabet. Each character is placed on a separa
 #### **Select Paths**
 You can easily select all paths in the selected layer.
 Place in MoBar or KBar and use with one button or run as a script. 
+
+#### **Duplicate Layers Below**
+When you duplicate layers with Ctrl+D, new layers are placed above the original layer.
+But with this script, you can easily duplicate the layer and move it underneath. You can also use it with a keyboard shortcut.
+
