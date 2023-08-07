@@ -5,7 +5,7 @@ I creating some script for my projects and you can use or customize for your nee
 # **Convert Digit Names**
 If your Composition name and the names of the layers in it are just numbers, it converts them to text. Or vice versa.
 
-#### **Prompt Unused Compositions**
+# **Prompt Unused Compositions**
 It displays the names of the compositions not used in your project.
 
 # **Quick Rename Selected Layer or Active Comp**
