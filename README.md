@@ -24,7 +24,7 @@ Place in MoBar or KBar and use with one button or run as a script.
 When you duplicate layers with Ctrl+D, new layers are placed above the original layer.
 But with this script, you can easily duplicate the layer and move it underneath. You can also use it with a keyboard shortcut.
 
-# **Replace with Project Items**
+# **Multi Replace with Project Items**
 No need to manually replace each project item with timeline items. 
 You can replace items using a button with a regular or random option.
 
