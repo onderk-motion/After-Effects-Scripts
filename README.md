@@ -2,6 +2,9 @@
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
 
+# **Paste Text from Clipboard**
+Sometimes, copied text doesn't paste to text. This script paste the text from the clipboard to the selected text layer in After Effects. It also allows you to paste text without double-clicking and opening it. If you assign a shortcut, you can use it with one click. 
+
 # **Convert Digit Names**
 If your Composition name and the names of the layers in it are just numbers, it converts them to text. Or vice versa.
 
