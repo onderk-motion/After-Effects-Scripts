@@ -4,7 +4,7 @@
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
 
-# **Create Controller & Add Dropdown Menu Control with scripting**
+# **Create Controller & Add Dropdown Menu Control**
 Dropdown menu controllers can be issue if you beginner. You can customize and add your script.
 
 # **Paste Text from Clipboard**
