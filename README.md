@@ -4,6 +4,14 @@
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
 
+# **Bounding Box**
+Creates customizable bounding boxes around selected layers with precise world transform calculations.
+## Features: - Custom colors & stroke styles - Smart layer parenting
+## Options:
+- `showDialog: true` - Shows the customization dialog (default)
+- `showDialog: false` - Runs immediately with preset values, no dialog
+
+
 # **Create Controller & Add Dropdown Menu Control**
 Dropdown menu controllers can be issue if you beginner. You can customize and add your script.
 
