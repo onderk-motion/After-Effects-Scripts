@@ -6,8 +6,12 @@ I creating some script for my projects and you can use or customize for your nee
 
 # **Bounding Box**
 Creates customizable bounding boxes around selected layers with precise world transform calculations.
-## Features: - Custom colors & stroke styles - Smart layer parenting
-## Options:
+
+## Bounding Box Features: 
+- Custom colors & stroke styles 
+- Smart layer parenting
+
+## Bounding Box Options:
 - `showDialog: true` - Shows the customization dialog (default)
 - `showDialog: false` - Runs immediately with preset values, no dialog
 
