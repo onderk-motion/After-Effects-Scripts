@@ -4,6 +4,9 @@
 [!["Follow me on Twitter/X"](https://github.com/user-attachments/assets/afdd6b11-0b28-4206-9160-fa3575194781)](https://x.com/onderk_motion)
 
 
+<img width="72" height="72" alt="x-social-media-follow (2)" src="https://github.com/user-attachments/assets/781680b1-1225-4a77-9838-351e1a5df915" />
+
+
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
 
