@@ -5,8 +5,11 @@ Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
 
 # **Shape Separator**
-Separates shape layer groups into individual layers. This is different from other scripts - it handles single-group cases by ungrouping first
-##Special Feature:## Automatically ungroups single main groups before separation
+Separates shape layer groups into individual layers. This is different from other scripts, it handles single-group cases by ungrouping first
+
+## Special Feature: ## 
+Automatically ungroups single main groups before separation
+
 Usage: File > Scripts > Run Script File... or add to KBar
 
 # **Bounding Box**
