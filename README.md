@@ -1,6 +1,9 @@
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/onderk_motion)
 
 
+[!["Buy Me A Coffee"](https://github.com/user-attachments/assets/da4ef8f7-bdb4-4584-ad0f-7e530eabf71c)](https://x.com/onderk_motion)
+
+
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
 
