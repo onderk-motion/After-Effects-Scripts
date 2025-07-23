@@ -1,13 +1,7 @@
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/onderk_motion)
 
 
-[!["Follow me on Twitter/X"](https://github.com/user-attachments/assets/afdd6b11-0b28-4206-9160-fa3575194781)](https://x.com/onderk_motion)
-
-
-<img width="72" height="72" alt="x-social-media-follow (2)" src="https://github.com/user-attachments/assets/781680b1-1225-4a77-9838-351e1a5df915" />
-
-<img width="128" height="128" alt="x-social-media-follow (3)" src="https://github.com/user-attachments/assets/724ca0fc-43c5-473c-b840-ab00670e57cd" />
-
+[!["Follow me on Twitter/X"](https://github.com/user-attachments/assets/724ca0fc-43c5-473c-b840-ab00670e57cd)](https://x.com/onderk_motion)
 
 
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
