@@ -1,7 +1,7 @@
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/onderk_motion)
 
 
-[!["Buy Me A Coffee"](https://github.com/user-attachments/assets/da4ef8f7-bdb4-4584-ad0f-7e530eabf71c)](https://x.com/onderk_motion)
+[!["Follow me on Twitter/X"](https://github.com/user-attachments/assets/afdd6b11-0b28-4206-9160-fa3575194781)](https://x.com/onderk_motion)
 
 
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
