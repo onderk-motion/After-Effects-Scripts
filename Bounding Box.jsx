@@ -1,5 +1,6 @@
 //Made by Onderk. Motion
 //https://github.com/onderk-motion/After-Effects-Scripts
+//Modified to preserve parent relationships
 
 (function createBoundingBoxGuide() {
     app.beginUndoGroup("Create Bounding Box Guide");
@@ -18,7 +19,8 @@
         lineCap: "Round Cap",
         lineJoin: "Round Join",
         guideShy: true,
-        guideLayer: true
+        guideLayer: true,
+        preserveParentRelationships: true // New option
     };
 
     // =========================
@@ -74,6 +76,10 @@
         var shyCheckbox = guidePanel.add("checkbox", undefined, "Make Bounding Box Layer shy");
         shyCheckbox.value = true;
 
+        // Parent preservation option
+        var parentPreservationCheckbox = guidePanel.add("checkbox", undefined, "Preserve Parent Relationships");
+        parentPreservationCheckbox.value = CONFIG.preserveParentRelationships;
+
         // --- Centered Buttons ---
         var buttonGroup = dialog.add("group");
         buttonGroup.alignment = "center";
@@ -114,6 +120,7 @@
             CONFIG.dashLength = parseFloat(dashInput.text) || 10;
             CONFIG.guideShy = shyCheckbox.value;
             CONFIG.guideLayer = guideLayerCheckbox.value;
+            CONFIG.preserveParentRelationships = parentPreservationCheckbox.value;
             dialog.close(1);
         };
         cancelButton.onClick = function() { dialog.close(0); };
@@ -153,7 +160,19 @@
         return;
     }
 
-    // ========== ADVANCED RELATIONSHIPS ==========
+    // ========== PARENT RELATIONSHIP FUNCTIONS ==========
+    function getLayerParentInfo(layers) {
+        var parentInfo = [];
+        for (var i = 0; i < layers.length; i++) {
+            var layer = layers[i];
+            parentInfo.push({
+                layer: layer,
+                originalParent: layer.parent
+            });
+        }
+        return parentInfo;
+    }
+
     function analyzeParentChildRelationships(layers) {
         var relationships = {
             parents: [], children: [], independent: [], rootParents: [], hierarchyInfo: []
@@ -313,6 +332,7 @@
     // =============================
 
     var relationships = analyzeParentChildRelationships(originalSelectedLayers);
+    var layerParentInfo = getLayerParentInfo(originalSelectedLayers);
 
     var minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     var validLayers = [];
@@ -347,6 +367,7 @@
     var boxHeight = maxY - minY;
     var boxCenter = [minX + boxWidth / 2, minY + boxHeight / 2];
 
+    // Create the bounding box
     var shapeLayer = comp.layers.addShape();
     shapeLayer.name = CONFIG.boxName;
     shapeLayer.position.setValue(boxCenter);
@@ -364,31 +385,75 @@
     stroke.property("Line Join").setValue(2);
     if (CONFIG.dashEnabled) addDashSafely(stroke, CONFIG.dashLength);
 
-    // --- Null Controller & Parenting ---
-    var nullController = null;
-    if (CONFIG.createNull) {
-        nullController = comp.layers.addNull();
-        nullController.name = CONFIG.boxName + " Controller";
-        nullController.position.setValue(boxCenter);
-        nullController.guideLayer = true;
-        shapeLayer.parent = nullController;
-    }
+    // ========== NEW PARENT PRESERVATION LOGIC ==========
+    if (CONFIG.preserveParentRelationships) {
+        // For each selected layer, if it has a parent that's not in the selection,
+        // make the bounding box inherit that parent and then parent the layer to the bounding box
+        var commonParents = {};
 
-    var parentTarget = CONFIG.createNull ? nullController : shapeLayer;
-    var layersToParent = [];
-    if (CONFIG.preserveRelationships) {
-        if (CONFIG.smartParenting) {
-            layersToParent = relationships.rootParents.concat(relationships.independent);
-        } else {
-            layersToParent = relationships.parents.concat(relationships.independent);
+        for (var i = 0; i < layerParentInfo.length; i++) {
+            var info = layerParentInfo[i];
+            var layer = info.layer;
+            var originalParent = info.originalParent;
+
+            // If layer has a parent that's not in the selection
+            if (originalParent) {
+                var parentInSelection = false;
+                for (var j = 0; j < originalSelectedLayers.length; j++) {
+                    if (originalSelectedLayers[j] === originalParent) {
+                        parentInSelection = true;
+                        break;
+                    }
+                }
+
+                if (!parentInSelection) {
+                    // Store this parent as a potential common parent
+                    var parentId = originalParent.index.toString();
+                    if (!commonParents[parentId]) {
+                        commonParents[parentId] = {
+                            parent: originalParent,
+                            layers: []
+                        };
+                    }
+                    commonParents[parentId].layers.push(layer);
+                }
+            }
+        }
+
+        // Find the most common parent or use the first one
+        var targetParent = null;
+        var maxLayers = 0;
+        for (var parentId in commonParents) {
+            if (commonParents[parentId].layers.length > maxLayers) {
+                maxLayers = commonParents[parentId].layers.length;
+                targetParent = commonParents[parentId].parent;
+            }
+        }
+
+        // If we found a common parent, parent the bounding box to it
+        if (targetParent) {
+            try {
+                shapeLayer.parent = targetParent;
+            } catch (e) {
+                // If parenting fails, continue without it
+            }
+        }
+
+        // Now parent all selected layers to the bounding box
+        for (var k = 0; k < validLayers.length; k++) {
+            try {
+                validLayers[k].parent = shapeLayer;
+            } catch (e) {
+                // If parenting fails, continue with next layer
+            }
         }
     } else {
-        layersToParent = validLayers;
-    }
-    for (var k = 0; k < layersToParent.length; k++) {
-        try {
-            layersToParent[k].parent = parentTarget;
-        } catch (e) {}
+        // Original behavior - parent layers to bounding box without preserving relationships
+        for (var k = 0; k < validLayers.length; k++) {
+            try {
+                validLayers[k].parent = shapeLayer;
+            } catch (e) {}
+        }
     }
 
     // --- Layer Order ---
@@ -397,8 +462,7 @@
         for (var l = 1; l < validLayers.length; l++) {
             if (validLayers[l].index < topLayer.index) topLayer = validLayers[l];
         }
-        if (CONFIG.createNull && nullController) nullController.moveBefore(topLayer);
-        else shapeLayer.moveBefore(topLayer);
+        shapeLayer.moveBefore(topLayer);
     } catch (e) {}
 
     // --- Auto Collapse Fix ---
