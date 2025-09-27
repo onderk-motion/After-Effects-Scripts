@@ -6,6 +6,9 @@ Follow me on Twitter/X: https://x.com/onderk_motion
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
 
+# **Set Viewer Resolution**
+Quickly sets the viewer resolution (Full, Half, Third, Quarter) for the active comp, selected comps, or all compositions in your project.
+
 # **Shape Separator**
 Separates shape layer groups into individual layers. This is different from other scripts, it handles single-group cases by ungrouping first
 
