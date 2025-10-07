@@ -6,13 +6,26 @@ Follow me on Twitter/X: https://x.com/onderk_motion
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
 
+## Recently Added Scripts
+- **Toggle Motion Blur for Selected Layers** – Quickly switch the motion blur toggle across every selected AV layer.
+- **Ungroup Selected Shape Groups** – Apply the Ungroup Shapes command to each selected group without disturbing nested sub-groups.
+
 # **Set Viewer Resolution**
 Quickly sets the viewer resolution (Full, Half, Third, Quarter) for the active comp, selected comps, or all compositions in your project.
+
+# **Toggle Motion Blur for Selected Layers**
+Quickly toggles the motion blur switch for every selected layer in the active composition.
+If at least one selected layer has motion blur disabled, all selected layers are enabled.
+If motion blur is already enabled everywhere, the script disables it for the selected layers.
+
+# **Ungroup Selected Shape Groups**
+Ungroups each selected shape group while leaving nested sub-groups untouched.
+Run the script to apply the built-in Ungroup Shapes command to every selected shape group in the Timeline.
 
 # **Shape Separator**
 Separates shape layer groups into individual layers. This is different from other scripts, it handles single-group cases by ungrouping first
 
-## Special Feature: ## 
+## Special Feature: ##
 Automatically ungroups single main groups before separation
 
 Usage: File > Scripts > Run Script File... or add to KBar
