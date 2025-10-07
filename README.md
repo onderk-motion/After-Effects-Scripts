@@ -6,6 +6,10 @@ Follow me on Twitter/X: https://x.com/onderk_motion
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I creating some script for my projects and you can use or customize for your need.
 
+## Recently Added Scripts
+- **Toggle Motion Blur for Selected Layers** – Quickly switch the motion blur toggle across every selected AV layer.
+- **Ungroup Selected Shape Groups** – Apply the Ungroup Shapes command to each selected group without disturbing nested sub-groups.
+
 # **Set Viewer Resolution**
 Quickly sets the viewer resolution (Full, Half, Third, Quarter) for the active comp, selected comps, or all compositions in your project.
 
