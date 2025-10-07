@@ -13,6 +13,10 @@ Quickly toggle the motion blur switch for every selected layer in the active com
 If at least one selected layer has motion blur disabled, all selected layers are enabled.
 If motion blur is already enabled everywhere, the script disables it for the selected layers.
 
+## Apply Parent Prefix to Selected Layers
+Prefix each selected layer's name with its parent layer's name in the active composition.
+The script replaces underscores in the parent name with spaces, skips layers without parents, and avoids applying duplicate prefixes.
+
 ## Ungroup Selected Shape Groups
 Ungroup each selected shape group while leaving nested sub-groups untouched.
 Run the script to apply the built-in Ungroup Shapes command to every selected shape group in the Timeline.
