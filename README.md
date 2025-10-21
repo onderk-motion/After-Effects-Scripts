@@ -5,6 +5,9 @@ Follow me on Twitter/X: https://x.com/onderk_motion
 Hi, I'm Onder and I'm a Freelance Sr. Motion Designer and Content creator.
 I create scripts for my projects and you can use or customize them for your needs.
 
+## Pseudo Parent
+Control parent-child relationships with keyframes instead of traditional parenting. Enable and disable parenting at specific times in your timeline with Easy Ease keyframes automatically applied.
+
 ## Set Viewer Resolution
 Quickly set the viewer resolution (Full, Half, Third, Quarter) for the active comp, selected comps, or all compositions in your project.
 
@@ -34,6 +37,7 @@ Create customizable bounding boxes around selected layers with precise world tra
 Features:
 - Custom colors and stroke styles
 - Smart layer parenting
+
 Options:
 - `showDialog: true` shows the customization dialog (default)
 - `showDialog: false` runs immediately with preset values and no dialog
@@ -70,3 +74,67 @@ Assign a keyboard shortcut for quick access.
 ## Multi Replace with Project Items
 Replace timeline items with project items in bulk using either a regular or random option.
 
+---
+
+## Installation
+
+### Method 1: ScriptUI Panels (Recommended for UI Scripts)
+For scripts with panels (like Pseudo Parent, Split Project Saver):
+1. Copy the `.jsx` file to:
+   - **Windows:** `C:\Program Files\Adobe\Adobe After Effects [version]\Support Files\Scripts\ScriptUI Panels\`
+   - **Mac:** `/Applications/Adobe After Effects [version]/Scripts/ScriptUI Panels/`
+2. Restart After Effects
+3. Access from: **Window → [Script Name]**
+
+### Method 2: Run Script File
+For one-time scripts or quick actions:
+1. In After Effects, go to **File → Scripts → Run Script File...**
+2. Navigate to and select the `.jsx` file
+3. The script will run immediately
+
+### Method 3: Keyboard Shortcuts
+For frequently used scripts:
+1. Place the `.jsx` file in the Scripts folder
+2. In After Effects, go to **Edit → Keyboard Shortcuts**
+3. Search for your script name under "File → Scripts"
+4. Assign your preferred shortcut
+
+### Method 4: Third-Party Launchers
+Use with KBar, MoBar, or other script launcher tools for quick access.
+
+---
+
+## Compatibility
+- After Effects CC 2018 and later
+- Tested on Windows and macOS
+- Some scripts may work on older versions
+
+---
+
+## Tips
+- Always save your project before running scripts that make significant changes
+- Use **Undo (Ctrl/Cmd+Z)** if a script doesn't produce the expected result
+- Assign keyboard shortcuts to your most-used scripts for faster workflow
+
+---
+
+## Contributing
+Found a bug or have a feature request? Feel free to open an issue or submit a pull request!
+
+---
+
+## Support
+If you find these scripts useful, consider supporting my work:
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/onderk_motion)
+
+---
+
+## License
+These scripts are free to use and modify for personal and commercial projects.
+
+---
+
+## Contact
+- Twitter/X: [@onderk_motion](https://x.com/onderk_motion)
+- GitHub: [onderk-motion](https://github.com/onderk-motion)
